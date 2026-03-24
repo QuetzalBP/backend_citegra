@@ -87,7 +87,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",   # Vite dev
     "http://localhost:3000",   # por si usas otro puerto
-    # "https://citegra.com",   # descomentar en producción
+    "https://citegra.com",
+    "https://tu-frontend.netlify.app",   # descomentar en producción
 ]
 
 # Variable interna usada en views.py para header manual (fallback)
@@ -103,3 +104,7 @@ EMAIL_USE_TLS       = True
 EMAIL_HOST_USER     = "citegraweb@gmail.com"
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_PASSWORD", "tfislijvqkxpvajt")
 DEFAULT_FROM_EMAIL  = "citegraweb@gmail.com"
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://tu-frontend.netlify.app",
+]
