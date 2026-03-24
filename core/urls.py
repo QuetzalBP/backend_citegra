@@ -1,0 +1,7 @@
+# backend/core/urls.py
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path("contact/", views.contact_send, name="contact_send"),
+]
