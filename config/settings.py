@@ -87,24 +87,27 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",   # Vite dev
     "http://localhost:3000",   # por si usas otro puerto
-    "https://citegra.com",
-    "https://tu-frontend.netlify.app",   # descomentar en producción
+    "https://citegra.com.mx",
+    "https://www.citegra.com.mx",
+    "https://citegrapaginaweb.netlify.app",   # descomentar en producción
 ]
 
 # Variable interna usada en views.py para header manual (fallback)
 CORS_ALLOWED_ORIGIN = "http://localhost:5173"
 
 # ── Correo (Outlook SMTP) ──────────────────────────────────────
-CONTACT_RECIPIENT_EMAIL = "citegraweb@gmail.com"
+CONTACT_RECIPIENT_EMAIL = "contacto@citegra.com.mx"
 
 EMAIL_BACKEND       = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"   # XXXX-CORRECTO-XXXX
 EMAIL_PORT          = 587
 EMAIL_USE_TLS       = True
-EMAIL_HOST_USER     = "citegraweb@gmail.com"
+EMAIL_HOST_USER     = "contacto@citegra.com.mx"
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_PASSWORD", "tfislijvqkxpvajt")
-DEFAULT_FROM_EMAIL  = "citegraweb@gmail.com"
+DEFAULT_FROM_EMAIL  = "contacto@citegra.com.mx"
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://tu-frontend.netlify.app",
+    "https://citegra.com.mx",
+    "https://www.citegra.com.mx",
+    "https://citegrapaginaweb.netlify.app",
 ]
